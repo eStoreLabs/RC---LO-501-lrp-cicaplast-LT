@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Roche-Posay</title>
+    <style>
+      /* Locator Web Light */
+      @font-face {
+        font-family: "LocatorWeb";
+        font-weight: 200;
+        src: url("assets/fonts/LocatorWebLight/LocatorWebLight.eot");
+        src: url("assets/fonts/LocatorWebLight/LocatorWebLight.eot?#iefix")
+            format("embedded-opentype"),
+          url("assets/fonts/LocatorWebLight/LocatorWebLight.woff2")
+            format("woff2"),
+          url("assets/fonts/LocatorWebLight/LocatorWebLight.woff")
+            format("woff");
+        font-style: normal;
+      }
+
+      /* Locator Web Medium */
+      @font-face {
+        font-family: "LocatorWeb";
+        font-weight: 400;
+        src: url("assets/fonts/LocatorWebMedium/LocatorWebMedium.eot");
+        src: url("assets/fonts/LocatorWebMedium/LocatorWebMedium.eot?#iefix")
+            format("embedded-opentype"),
+          url("assets/fonts/LocatorWebMedium/LocatorWebMedium.woff2")
+            format("woff2"),
+          url("assets/fonts/LocatorWebMedium/LocatorWebMedium.woff")
+            format("woff");
+        font-style: normal;
+      }
+
+      #es-effaclar.es-effaclar {
+        font-family: "LocatorWeb", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 1.2;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        color: #000;
+        background: #fff;
+      }
+
+      #es-effaclar.es-effaclar html,
+      #es-effaclar.es-effaclar body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #es-effaclar.es-effaclar sup {
+        font-size: 0.6em;
+        vertical-align: top;
+      }
+
+      #es-effaclar.es-effaclar h2,
+      #es-effaclar.es-effaclar h3,
+      #es-effaclar.es-effaclar h4,
+      #es-effaclar.es-effaclar h5 {
+        color: #000;
+        font-family: "LocatorWeb", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #es-effaclar.es-effaclar * {
+        box-sizing: border-box;
+      }
+
+      #es-effaclar.es-effaclar .es-kv {
+        margin-bottom: 32px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__logo-2 img {
+        margin: 0 auto;
+        display: block;
+        max-width: 200px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__logo {
+        margin-right: 16px;
+        max-width: 50%;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__logo-2 {
+        position: relative;
+        padding-bottom: 20px;
+        max-width: 50%;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__logo-2--desc {
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        color: inherit;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: inherit;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__logo-2 img {
+        margin: 0 auto;
+        display: block;
+        max-width: 200px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img-packshot {
+        transition: transform 0.3s ease;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--logo {
+        margin-left: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--desktop {
+        display: none;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--badge {
+        padding: 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--stamp {
+        margin-right: 0;
+        margin-left: 0;
+        width: 60px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__cap {
+        padding: 16px 0;
+        font-weight: 200;
+        font-size: 16px;
+        flex: 2;
+        margin: 0;
+        color: inherit;
+        line-height: inherit;
+        text-align: right;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__packshot {
+        position: relative;
+        z-index: 3;
+        padding: 16px 0;
+        opacity: 1;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__packshot:hover .es-kv__img-packshot {
+        transform: scale(1.1);
+      }
+
+      #es-effaclar.es-effaclar .es-kv__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        flex-flow: column;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__stamp {
+        display: flex;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__title {
+        padding: 16px;
+        font-weight: 200;
+        font-size: 28px;
+        margin: 0;
+        color: inherit;
+        line-height: inherit;
+        text-transform: uppercase;
+        text-align: right;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__title span {
+        color: #009de5;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__stamp {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 16px;
+        min-width: 265px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__subtitle {
+        padding-left: 16px;
+        color: #009ee3;
+        font-weight: 400;
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        text-transform: uppercase;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__stamp-text {
+        padding-left: 16px;
+        font-weight: 200;
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        line-height: inherit;
+        text-transform: uppercase;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__stamp-text span {
+        font-weight: 400;
+      }
+
+      #es-effaclar.es-effaclar .es-serum {
+        margin: 0 auto;
+        margin-bottom: 32px;
+        padding: 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-serum__title {
+        margin-bottom: 8px;
+        font-weight: 200;
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        line-height: inherit;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      #es-effaclar.es-effaclar .es-serum__subtitle {
+        font-weight: 200;
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        line-height: inherit;
+        text-align: center;
+      }
+
+      #es-effaclar.es-effaclar .es-serum__container {
+        margin: 0 auto;
+        margin-top: 42px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      #es-effaclar.es-effaclar .es-serum__feature {
+        width: 160px;
+      }
+
+      #es-effaclar.es-effaclar .es-serum__feature:hover .es-serum__icon {
+        transform: scale(1.1);
+      }
+
+      #es-effaclar.es-effaclar .es-serum__icon {
+        flex: 1;
+        transition: transform 0.3s ease;
+      }
+
+      #es-effaclar.es-effaclar .es-serum__img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+
+      #es-effaclar.es-effaclar .es-serum__text {
+        margin: 16px 0;
+        margin-bottom: 24px;
+        font-weight: 400;
+        font-size: 11px;
+        padding: 0;
+        color: inherit;
+        line-height: inherit;
+        flex: 2;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      #es-effaclar.es-effaclar .es-res {
+        color: #fff;
+        margin-bottom: 40px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__wrapper {
+        padding: 32px 16px;
+        background: #1b8dc9;
+      }
+
+      #es-effaclar.es-effaclar .es-res__title {
+        margin: 0 auto;
+        color: #fff;
+        font-weight: 200;
+        font-size: 27px;
+        padding: 0;
+        line-height: inherit;
+        max-width: 400px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__container {
+        margin: 0 auto;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
+        max-width: 400px;
+        gap: 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__single {
+        width: 45%;
+      }
+
+      #es-effaclar.es-effaclar .es-res__percent {
+        color: #fff;
+        font-weight: 400;
+        font-size: 40px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        line-height: 1;
+      }
+
+      #es-effaclar.es-effaclar .es-res__percent sup {
+        font-size: 34px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__percent small {
+        font-size: 11px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__text {
+        color: #fff;
+        font-weight: 400;
+        font-size: 11px;
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      #es-effaclar.es-effaclar .es-res__disc {
+        padding: 16px;
+        font-size: 10px;
+        margin: 0;
+        color: inherit;
+        line-height: inherit;
+        text-align: center;
+      }
+
+      #es-effaclar.es-effaclar .es-res__disclaimer {
+        padding: 24px 16px 0 16px;
+        font-size: 12px;
+        margin: 0;
+        color: inherit;
+        line-height: inherit;
+        text-align: center;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        padding: 0 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients__title {
+        margin-bottom: 32px;
+        font-weight: bold;
+        font-size: 28px;
+        padding: 0;
+        color: inherit;
+        line-height: inherit;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      #es-effaclar.es-effaclar
+        .es-ingredients__container
+        .es-ingredients__single {
+        opacity: 1;
+      }
+
+      #es-effaclar.es-effaclar
+        .es-ingredients__container:hover
+        .es-ingredients__single {
+        opacity: 0.5;
+      }
+
+      #es-effaclar.es-effaclar
+        .es-ingredients__container
+        .es-ingredients__single:hover {
+        opacity: 1;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px 5px;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients__single {
+        flex: 1;
+        flex-basis: 100%;
+        max-width: 170px;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients__image {
+        position: relative;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients__label {
+        position: absolute;
+        top: 24px;
+        left: 0;
+        width: 96%;
+        font-size: 18px;
+        margin: 0;
+        color: inherit;
+        background: rgba(255, 255, 255, 0.66);
+        text-align: left;
+        text-transform: uppercase;
+        min-height: 60px;
+        padding: 10px 5px 5px 5px;
+        line-height: 1;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients__label span {
+        position: relative;
+        top: -8px;
+        font-weight: 200;
+        font-size: 19px;
+        letter-spacing: -1px;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients__img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients__text {
+        padding-top: 16px;
+        font-size: 14px;
+        padding: 0;
+        color: inherit;
+        line-height: inherit;
+      }
+
+      #es-effaclar.es-effaclar .es-use {
+        margin-bottom: 56px;
+      }
+
+      #es-effaclar.es-effaclar .es-use__wrapper {
+        padding: 24px 16px;
+        background: #57adde;
+      }
+
+      #es-effaclar.es-effaclar .es-use__title {
+        margin-bottom: 24px;
+        color: #fff;
+        font-weight: 200;
+        font-size: 27px;
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        text-transform: uppercase;
+      }
+
+      #es-effaclar.es-effaclar .es-use__item {
+        margin-bottom: 16px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+      }
+
+      #es-effaclar.es-effaclar .es-use__text {
+        margin-bottom: 16px;
+        color: #fff;
+        font-weight: 200;
+        font-size: 15px;
+        padding: 0;
+        line-height: inherit;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__title {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 16px;
+        font-weight: 200;
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        line-height: inherit;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__img {
+        display: none;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__container {
+        padding: 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single {
+        margin-bottom: 64px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__number {
+        color: #1292b6;
+        font-weight: 400;
+        font-size: 156px;
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        line-height: 0.75;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__subtitle {
+        margin: 12px 0;
+        font-size: 20px;
+        padding: 0;
+        color: inherit;
+        line-height: inherit;
+        text-transform: uppercase;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__subtitle strong {
+        display: block;
+        font-size: 24px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__text {
+        margin-bottom: 24px;
+        font-size: 15px;
+        padding: 0;
+        color: inherit;
+        line-height: inherit;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__link {
+        border: 1px solid #009ee3;
+        padding: 4px 16px;
+        color: #fff;
+        font-size: 15px;
+        margin: 0;
+        line-height: inherit;
+        text-decoration: none;
+        background: #009ee3;
+        transition: all 0.3s ease;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__link:hover {
+        color: #009ee3;
+        background: #fff;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__packshot {
+        padding-left: 100px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__img-packshot {
+        margin: 0 auto;
+        margin-bottom: -140px;
+        display: block;
+        max-width: 100%;
+        max-height: 400px;
+      }
+
+      #es-effaclar.es-effaclar .es-terms {
+        margin-bottom: 32px;
+        padding: 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__title {
+        margin-bottom: 40px;
+        font-weight: 200;
+        font-size: 28px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__term {
+        margin: 8px;
+        display: flex;
+        align-items: flex-end;
+        min-height: 160px;
+        flex: 1;
+        flex-basis: 100%;
+        max-width: 340px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__term--1 {
+        background: url("assets/img/obligations-1.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__term--2 {
+        background: url("assets/img/obligations-2.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__term--3 {
+        background: url("assets/img/obligations-3.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__term--4 {
+        background: url("assets/img/obligations-4.png");
+
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__text {
+        margin-top: 16px;
+        padding: 10px 0 0 10px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      #es-effaclar.es-effaclar .es-disclaimer {
+        margin-bottom: 32px;
+      }
+
+      #es-effaclar.es-effaclar .es-disclaimer__text {
+        margin: 0 auto;
+        max-width: 90%;
+        font-size: 11px;
+        padding: 30px 40px 0 40px;
+        color: inherit;
+        line-height: inherit;
+        text-align: center;
+      }
+
+      @media screen and (min-width: 561px) {
+        #es-effaclar.es-effaclar .es-serum__container {
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+        }
+      }
+
+      @media screen and (min-width: 731px) {
+        #es-effaclar.es-effaclar .es-kv__header {
+          margin: 0 auto;
+          margin-bottom: 32px;
+          flex-direction: row;
+          justify-content: space-around;
+          padding: 0;
+          max-width: 750px;
+          align-items: flex-start;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__container {
+          position: relative;
+          margin-bottom: 16px;
+          display: flex;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__content {
+          width: 50%;
+          align-items: flex-end;
+          flex: 1;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__title {
+          padding-top: 24px;
+          padding-right: 100px;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__photo {
+          position: relative;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 1;
+          max-width: 400px;
+          overflow: hidden;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__badge--mobile {
+          display: none;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__stamp {
+          padding: 0;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__packshot {
+          position: absolute;
+          z-index: 1;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        #es-effaclar.es-effaclar .es-kv__img--mobile {
+          display: none;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__img--desktop {
+          position: relative;
+          z-index: 0;
+          display: block;
+          max-width: 95%;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__img--badge {
+          margin-left: 0;
+          padding: 0;
+          padding-bottom: 16px;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__img--first {
+          order: 2;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__stamp {
+          padding-right: 60px;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__subtitle {
+          padding-right: 16px;
+          padding-left: 0;
+          text-align: right;
+        }
+
+        #es-effaclar.es-effaclar .es-res {
+          margin-bottom: 64px;
+        }
+
+        #es-effaclar.es-effaclar .es-res__wrapper {
+          height: 381px;
+          padding-right: 80px;
+          background: url("assets/img/info.png") no-repeat;
+          background-size: cover;
+          background-position: right;
+        }
+
+        #es-effaclar.es-effaclar .es-res__title {
+          margin-bottom: 40px;
+        }
+
+        #es-effaclar.es-effaclar .es-res__container {
+          margin-bottom: 0;
+          gap: 32px;
+        }
+
+        #es-effaclar.es-effaclar .es-res__wrapper {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        #es-effaclar.es-effaclar .es-res__disclaimer {
+          margin: 0 auto;
+        }
+
+        #es-effaclar.es-effaclar .es-res__content {
+          margin-left: 15%;
+        }
+
+        #es-effaclar.es-effaclar .es-ingredients {
+          margin-bottom: 32px;
+          padding: 0;
+        }
+
+        #es-effaclar.es-effaclar .es-ingredients__container {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        #es-effaclar.es-effaclar .es-use__title {
+          padding: 0;
+          font-size: 32px;
+        }
+
+        #es-effaclar.es-effaclar .es-use__wrapper {
+          height: 404px;
+          display: flex;
+          align-items: center;
+          background: url("assets/img/banner.png") no-repeat center right;
+          background-size: cover;
+        }
+
+        #es-effaclar.es-effaclar .es-use__content {
+          padding-left: 32px;
+          max-width: 375px;
+        }
+
+        #es-effaclar.es-effaclar .es-use__list {
+          margin-bottom: 0;
+          padding-left: 16px;
+        }
+
+        #es-effaclar.es-effaclar .es-use__item:last-child {
+          margin-bottom: 0;
+        }
+
+        #es-effaclar.es-effaclar .es-use__text:last-child {
+          margin-bottom: 0;
+        }
+
+        #es-effaclar.es-effaclar .es-routine {
+          margin-bottom: 40px;
+        }
+
+        #es-effaclar.es-effaclar .es-routine__img {
+          display: block;
+          -o-object-fit: cover;
+          object-fit: cover;
+          max-width: 110%;
+        }
+
+        #es-effaclar.es-effaclar .es-routine__container {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          padding: 0;
+        }
+
+        #es-effaclar.es-effaclar .es-routine__single {
+          position: absolute;
+          margin-bottom: 0;
+          max-width: 25%;
+        }
+
+        #es-effaclar.es-effaclar .es-routine__single--1 {
+          top: 40px;
+          right: 50px;
+        }
+
+        #es-effaclar.es-effaclar .es-routine__single--2 {
+          top: 24%;
+          left: 60px;
+        }
+
+        #es-effaclar.es-effaclar .es-routine__single--3 {
+          top: 53%;
+          right: 50px;
+        }
+
+        #es-effaclar.es-effaclar .es-routine__single--4 {
+          top: 71%;
+          left: 60px;
+        }
+
+        #es-effaclar.es-effaclar .es-routine__packshot {
+          display: none;
+        }
+
+        #es-effaclar.es-effaclar .es-terms {
+          padding: 16px 0;
+        }
+
+        #es-effaclar.es-effaclar .es-terms__container {
+          margin: 0 -8px;
+        }
+
+        #es-effaclar.es-effaclar .es-terms__term {
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (min-width: 830px) {
+        #es-effaclar.es-effaclar .es-kv__packshot {
+          left: 54%;
+        }
+
+        #es-effaclar.es-effaclar .es-use__content {
+          padding-left: 64px;
+        }
+
+        #es-effaclar.es-effaclar .es-res__content {
+          margin-left: 10%;
+        }
+
+        #es-effaclar.es-effaclar .es-res__title {
+          margin-bottom: 25px;
+          font-size: 34px;
+          max-width: unset;
+        }
+
+        #es-effaclar.es-effaclar .es-res__percent {
+          font-size: 50px;
+        }
+
+        #es-effaclar.es-effaclar .es-res__percent small {
+          font-size: 14px;
+        }
+
+        #es-effaclar.es-effaclar .es-res__text {
+          font-size: 14px;
+        }
+
+        #es-effaclar.es-effaclar .es-res__container {
+          gap: 16px 32px;
+        }
+      }
+
+      @media screen and (min-width: 900px) {
+        #es-effaclar.es-effaclar .es-kv__packshot {
+          left: 50%;
+        }
+
+        #es-effaclar.es-effaclar .es-kv__photo {
+          max-width: 500px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="es-effaclar" id="es-effaclar">
+      <div class="es-kv">
+        <div class="es-kv__header">
+          <div class="es-kv__logo">
+            <img src="assets/img/logo.png" alt="La roche logo" />
+          </div>
+          <div class="es-kv__logo-2">
+            <img src="assets/img/logo2.png" alt="La roche logo" />
+            <p class="es-kv__logo-2--desc">GERA GYVENTI, KAI ODAI GERA</p>
+          </div>
+        </div>
+        <div class="es-kv__container">
+          <div class="es-kv__packshot">
+            <img
+              src="assets/img/packshot.png"
+              alt=""
+              class="es-kv__img es-kv__img-packshot"
+            />
+          </div>
+          <div class="es-kv__content">
+            <h2 class="es-kv__title">
+              VEIKSMINGAS<br />
+              ODOS ATKŪRIMAS<br />
+              NUO 1 DIENOS<sup>1</sup><br />
+              <span>INTENSYVIAI ATKURIANTIS RAMINAMASIS BALZAMAS </span>
+            </h2>
+          </div>
+          <div class="es-kv__photo">
+            <img
+              src="assets/img/kv2.jpg"
+              alt=""
+              class="es-kv__img es-kv__img--badge es-kv__img--desktop"
+            />
+            <div class="es-kv__badge es-kv__badge--mobile">
+              <img
+                src="assets/img/badge.jpg"
+                alt=""
+                class="es-kv__img es-kv__img--badge"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="es-serum">
+        <h3 class="es-serum__title"><strong>CICAPLAST</strong> BAUME B5+</h3>
+        <h5 class="es-serum__subtitle">
+          Kūnui ir veidui – kūdikiams, vaikams ir suaugusiems.
+        </h5>
+        <div class="es-serum__container">
+          <div class="es-serum__feature">
+            <div class="es-serum__icon">
+              <img src="assets/img/check.png" alt="" class="es-serum__img" />
+            </div>
+            <p class="es-serum__text">
+              GREITINA IR PADEDA <br />EPIDERMIO ATSIKŪRIMO<br />
+              PROCESUI
+            </p>
+          </div>
+          <div class="es-serum__feature">
+            <div class="es-serum__icon">
+              <img src="assets/img/check.png" alt="" class="es-serum__img" />
+            </div>
+            <p class="es-serum__text">
+              NEDELSIANT<br />
+              NURAMINA
+            </p>
+          </div>
+          <div class="es-serum__feature">
+            <div class="es-serum__icon">
+              <img src="assets/img/check.png" alt="" class="es-serum__img" />
+            </div>
+            <p class="es-serum__text">
+              KOMFORTIŠKAS<br />
+              DRĖKINIMO POJŪTIS IR <br />
+              MAŽIAU SUDIRGINTA ODA
+            </p>
+          </div>
+          <div class="es-serum__feature">
+            <div class="es-serum__icon">
+              <img src="assets/img/check.png" alt="" class="es-serum__img" />
+            </div>
+            <p class="es-serum__text">
+              SUMAŽINA ODOS<br />
+              POKYČIŲ <br />
+              MATOMUMĄ
+            </p>
+          </div>
+          <div class="es-serum__feature">
+            <div class="es-serum__icon">
+              <img src="assets/img/check.png" alt="" class="es-serum__img" />
+            </div>
+            <p class="es-serum__text">
+              VEIKIA JAU NUO <br />PIRMOJO <br />
+              PANAUDOJIMO
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="es-res">
+        <div class="es-res__wrapper">
+          <div class="es-res__content">
+            <h3 class="es-res__title">
+              <strong>VEIKSMINGUMO IR PUIKAUS </strong><br />
+              TOLERAVIMO GARANTIJA
+            </h3>
+            <div class="es-res__container">
+              <div class="es-res__single">
+                <p class="es-res__percent">100<sup>%</sup></p>
+                <p class="es-res__text">
+                  TEIGIMU, ODA<br />
+                  REGENERUOTA
+                  <sup>2</sup>
+                </p>
+              </div>
+              <div class="es-res__single">
+                <p class="es-res__percent">90<sup>%</sup></p>
+                <p class="es-res__text">
+                  TEIGIMU, ODA<br />
+                  APSAUGOTA<sup>3</sup>
+                </p>
+              </div>
+              <div class="es-res__single">
+                <p class="es-res__percent">84<sup>%</sup></p>
+                <p class="es-res__text">
+                  TEIGIMU, ODA<br />
+                  NURAMINTA<sup>4</sup>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="es-ingredients">
+        <h3 class="es-ingredients__title">
+          AKTYVIOSIOS SUDEDAMOSIOS<br />
+          MEDŽIAGOS
+        </h3>
+        <div class="es-ingredients__container">
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-1.png"
+                alt=""
+                class="es-ingredients__img"
+              />
+              <p class="es-ingredients__label">
+                <strong>tribioma</strong>
+              </p>
+            </div>
+            <p class="es-ingredients__text">
+              Unikalus prebiotinis kompleksas, padedantis palaikyti mikrobiotos
+              pusiausvyrą.
+            </p>
+          </div>
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-2.png"
+                alt=""
+                class="es-ingredients__img"
+              />
+              <p class="es-ingredients__label">
+                <strong>AQUA POSAE<br />FILIFORMIS</strong>
+              </p>
+            </div>
+            <p class="es-ingredients__text">Palaiko mikrobiotos pusiausvyrą.</p>
+          </div>
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-3.png"
+                alt=""
+                class="es-ingredients__img"
+              />
+              <p class="es-ingredients__label">
+                <strong
+                  >SVIESTMEDŽIO<br />
+                  ALIEJUS</strong
+                >
+              </p>
+            </div>
+            <p class="es-ingredients__text">
+              Atkuria natūralų apsauginį odos sluoksnį.
+            </p>
+          </div>
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-4.png"
+                alt=""
+                class="es-ingredients__img"
+              />
+              <p class="es-ingredients__label">
+                <strong>PANTENOLIS</strong><br />(VITAMINAS B5)
+              </p>
+            </div>
+            <p class="es-ingredients__text">
+              Pasižymi odą raminančiomis ir atkuriančiomis savybėmis. Ramina
+              deginimą ir niežėjimą.
+            </p>
+          </div>
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-6.png"
+                alt=""
+                class="es-ingredients__img"
+              />
+              <p class="es-ingredients__label">
+                <strong>MADEKASOZIDAS</strong>
+              </p>
+            </div>
+            <p class="es-ingredients__text">
+              Pasižymi priešuždegiminiu poveikiu ir padeda atsikurti epidermiui.
+            </p>
+          </div>
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-7.png"
+                alt=""
+                class="es-ingredients__img"
+              />
+              <p class="es-ingredients__label">
+                <strong>MINERALŲ KOMPLEKSAS</strong><br />
+                (CINKAS IR<br />
+                MANGANAS)
+              </p>
+            </div>
+            <p class="es-ingredients__text">
+              Aktyvus antibakterinis kompleksas.
+            </p>
+          </div>
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-5.jpg"
+                alt=""
+                class="es-ingredients__img"
+              />
+              <p class="es-ingredients__label">
+                <strong>TERMINIO ŠALTINIO VANDUO</strong><br />
+                IŠ LA ROCHE-POSAY
+              </p>
+            </div>
+            <p class="es-ingredients__text">
+              Pasižymintis raminančiomis ir slopinančiomis savybėmis.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="es-use">
+        <div class="es-use__wrapper">
+          <div class="es-use__content">
+            <h3 class="es-use__title">
+              <strong>NAUDOJIMO BŪDAS</strong>
+            </h3>
+            <ol class="es-use__list">
+              <li class="es-use__item">
+                <p class="es-use__text">
+                  Naudoti du kartus per dieną ant švarios ir sausos odos. Galima
+                  naudoti kūnui, veidui ir lūpoms.
+                </p>
+              </li>
+              <li class="es-use__item">
+                <p class="es-use__text">
+                  Vengti kontakto su akimis. Nenaudoti ant atvirų žaizdų.
+                  Nenuryti.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="es-routine">
+        <h3 class="es-routine__title"><strong>PRIEŽIŪROS</strong> RUTINA</h3>
+        <div class="es-routine__container">
+          <img src="assets/img/bg2.png" alt="" class="es-routine__img" />
+          <div class="es-routine__single es-routine__single--1">
+            <div class="es-routine__packshot">
+              <img
+                src="assets/img/routine-1.png"
+                alt=""
+                class="es-routine__img-packshot"
+              />
+            </div>
+            <p class="es-routine__number">1</p>
+            <p class="es-routine__subtitle">
+              <strong>LIPIKAR<br />SYNDET AP+</strong>
+              PRAUSIMOSI<br />
+              KREMAS SAUSAI<br />
+              IR ATOPINEI ODAI
+            </p>
+            <p class="es-routine__text">
+              Nedelsiamas raminamasis ir slopinamasis poveikis. Teigiamas
+              poveikis natūraliam odos apsauginiam sluoksniui.
+            </p>
+            <a
+              href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/kehahooldus/la-roche-posay-lipikar-syndet-ap-pesukreem-400ml"
+              target="_blank"
+              class="es-routine__link"
+              >TUTVU</a
+            >
+          </div>
+          <div class="es-routine__single es-routine__single--2">
+            <div class="es-routine__packshot">
+              <img
+                src="assets/img/routine-2.png"
+                alt=""
+                class="es-routine__img-packshot"
+              />
+            </div>
+            <p class="es-routine__number">2</p>
+            <p class="es-routine__subtitle">
+              <strong>LIPIKAR</strong> LIPIKAR BALSAM<br />AP+M
+            </p>
+            <p class="es-routine__text">
+              Regeneruojamasis trejopo poveikio balzamas sausai, labai sausai, į atopiją linkusiai odai.
+            </p>
+            <a
+              href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/kehahooldus/lrp-lipikar-baume-ap-m-kehapalsam-400ml"
+              target="_blank"
+              class="es-routine__link"
+              >TUTVU</a
+            >
+          </div>
+          <div class="es-routine__single es-routine__single--3">
+            <div class="es-routine__packshot">
+              <img
+                src="assets/img/routine-3.png"
+                alt=""
+                class="es-routine__img-packshot"
+              />
+            </div>
+            <p class="es-routine__number">3</p>
+            <p class="es-routine__subtitle">
+              <strong
+                >CICAPLAST<br />
+                BAUME B5+</strong
+              >
+              INTENSYVIAI<br /> ATKURIANTIS<br /> RAMINAMASIS<br /> BALZAMAS
+            </p>
+            <p class="es-routine__text">
+              Veiksmingas odos atkūrimas nuo 1 dienos. Nedelsiant nuramina, pagreitina ir padeda epidermio atsikūrimo procesui bei sumažina odos pakitimų matomumą.
+            </p>
+            <a
+              href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/kehahooldus/lrp-cicaplast-baume-b5-nahapalsam-rahustav-100ml"
+              target="_blank"
+              class="es-routine__link"
+              >TUTVU</a
+            >
+          </div>
+          <div class="es-routine__single es-routine__single--4">
+            <div class="es-routine__packshot">
+              <img
+                src="assets/img/routine-4.png"
+                alt=""
+                class="es-routine__img-packshot"
+              />
+            </div>
+            <p class="es-routine__number">4</p>
+            <p class="es-routine__subtitle">
+              <strong>CICAPLAST</strong>RANKŲ KREMAS
+            </p>
+            <p class="es-routine__text">
+              Radīts sausām, bojātām rokām, kurām nepieciešama intensīva
+              atjaunošana.
+            </p>
+            <a
+              href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/kate-ja-jalahooldus/la-roche-posay-cicaplast-kaitsevoimet-taastav-katekreem-50ml"
+              target="_blank"
+              class="es-routine__link"
+              >TUTVU</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="es-terms">
+        <h3 class="es-terms__title">
+          <strong>la roche-posay</strong> ĮSIPAREIGOJIMAI
+        </h3>
+        <div class="es-terms__container">
+          <div class="es-terms__term es-terms__term--1">
+            <p class="es-terms__text es-terms__text--white">
+              100% PRODUKTŲ IŠTIRTI<br />
+              DĖL ALERGIJOS SUKĖLIMO
+            </p>
+          </div>
+          <div class="es-terms__term es-terms__term--2">
+            <p class="es-terms__text">
+              TIK ESMINĖS VEIKLIOSIOS SUDEDAMOSIOS <br />
+              MEDŽIAGOS IR OPTIMALI JŲ KONCENTRACIJA
+            </p>
+          </div>
+          <div class="es-terms__term es-terms__term--3">
+            <p class="es-terms__text">LAIKO TĖKMEI ATSPARIOS FORMULĖS</p>
+          </div>
+          <div class="es-terms__term es-terms__term--4">
+            <p class="es-terms__text es-terms__text--white">
+              IŠBANDYTA SU LABAI JAUTRIA ODA
+            </p>
+          </div>
+        </div>
+        <div>
+          <p class="es-disclaimer__text">
+            <sup>1</sup>lyginant su produkto nenaudojimu Aparatinis tyrimas, 26 asmenų.<br />
+            <sup>2</sup>Stebėjimo tyrimas, tėvų atliekamas 52 vaikų odos būklės vertinimas, po 4 naudojimo savaičių, 2x per dieną.<br />
+            <sup>3</sup>Stebėjimo tyrimas, tėvų atliekamas 52 vaikų odos būklės vertinimas, iš karto po panaudojimo.<br />
+            <sup>4</sup>Stebėjimo tyrimas, 51 asmens, ir karto po panaudojimo.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
